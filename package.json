@@ -1,0 +1,19 @@
+{
+  "name": "games-rpg",
+  "version": "1.0.0",
+  "description": "Game RPG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baptistefaidherbe/Game-RPG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baptistefaidherbe/Game-RPG/issues"
+  },
+  "homepage": "https://github.com/baptistefaidherbe/Game-RPG#readme"
+}

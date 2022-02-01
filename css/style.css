@@ -18,10 +18,11 @@ body {
 display: flex;
 flex-direction: column;
 align-items: center;
-background-image: url('../img/zelda.jpg');
+background-image: url('/home/baptiste/Bureau/Games-RPG/images/e43773b4c17ed8311dbd8ddaa896359b.jpg');
 background-size: cover;
 width: 100%;
 height: 100vh;
+
 
 
 
@@ -29,9 +30,13 @@ height: 100vh;
 
 #board{
 
-  margin-top:200px;
-  background-image: url('../img/mapfinal.png');
-  box-shadow: 2px 5px 19px 26px rgb(33 18 15 / 55%)
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  
+  box-shadow: 2px 5px 19px 26px rgba(102 204 31 / 17%);
+  filter: drop-shadow(0 0 0.75rem rgb(0, 132, 255));
+  
+  
   
 
 }
@@ -44,10 +49,13 @@ height: 100vh;
   color: white;
   position: absolute;
   top:0;
+  font-weight: bold;
   text-align: center;
   padding-top: 150px;
-  font-size: 2em;
+  font-size: 2.3em;
   display: none;
+  
+  text-shadow: 2px 1px 2px #fbfbfb29, 0 0 1em #0089ff, 0 0 0.2em #00d9ff
 
   
 }
@@ -56,16 +64,19 @@ button{
 
   height: 50px;
   width: 150px;
-  background-color: rgba(232, 187, 5);
+  background-color:rgba(155 232 5 / 40%);
   border-radius: 10px;
   font-weight: bold;
+  color :#092d02;
+  border:none;
+  border: 1px solid #092d02;
 }
 
 button:hover{
 
   height: 50px;
   width: 150px;
-  background-color: rgb(232, 198, 5);
+  background-color: rgba(61 232 5 / 40%);
 
   transition-duration: 0.3s;
   animation:pulsation_bouton .8s ease-out;
@@ -74,7 +85,7 @@ button:hover{
 @keyframes pulsation_bouton {
 	
   from{
-      box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(44,66%,57%)
+      box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 rgb(131, 218, 73)
       
       }
   to{
@@ -83,6 +94,11 @@ button:hover{
 
   }
 
+.hidden{
+
+  display:none;
+}
+
 
 
 .player {
@@ -90,17 +106,99 @@ button:hover{
   /* border-style: solid;
   border-width: 15px 0 15px 35px;
   border-color: transparent transparent transparent blue; */
-  background-image: url('../img/sprite.png');
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/sprite.png');
   background-position: 1px 85px;
   height: 46px;
   margin: 20px;
   width: 39px;
-  background-size: 37px
+  background-size: 37px;
+
+}
+
+#img1{
+  
+    background-image: url("/home/baptiste/Bureau/Games-RPG/images/1530278434-1112-logo.png");
+    background-position: -6px 8px;
+    height: 467px;
+    width: 370px;
+    position: absolute;
+    z-index: -9;
+    left:165px;
+    bottom:18px;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+  }
+
+
+  
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+
+
+
+#img2{
+
+  background-image: url("/home/baptiste/Bureau/Games-RPG/images/Art_Link_Cartoon_Ultimate.png");
+  background-position: -4px 10px;
+  height: 467px;
+  width: 376px;
+  position: absolute;
+  z-index: -9;
+  bottom: 18px;
+  background-size: cover;
+  left: -250px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+
+
+
+}
+
+
+.enemy{
+
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/bowser.png');
+  background-position: 0px 76px;
+  height: 70px;
+  width: 69px;
+  background-size: 65px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+	
+		transform: translatey(0px);
+	}
+	50% {
+	
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
 }
 
 .left {
 
-  background-image: url('../img/sprite.png');
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/sprite.png');
   background-position: 1px 127px;
   height: 43px;
   margin: 20px;
@@ -111,7 +209,7 @@ button:hover{
 
 .up {
 
-  background-image: url('../img/sprite.png');
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/sprite.png');
   background-position: 0px 211px;
   height: 46px;
   margin: 20px;
@@ -120,26 +218,94 @@ button:hover{
 
 .down {
 
-  background-image: url('../img/sprite.png');
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/sprite.png');
   background-position: 0px 170px;
   height: 44px;
   margin: 20px;
   width: 39px;
 }
 
+.wall{
+
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/da9rh72-161fa1d3-7e65-428d-95d5-607e53eed11b.png');
+  background-position: -59px 296px;
+  background-size: 190px;
+ 
+
+}
+
+#score{
+
+  width: 100%;
+  height:70px;
+  padding: 25px 0px 30px 50px;
+  background-color: rgba(164, 199, 67, 0.5);
+  font-size: 1.2em;
+  color:white;
+  font-weight: bold;
+  box-sizing:border-box;
+  text-shadow: #42cb7e 1px 0 10px;
+  display:flex;
+  box-shadow:#42cb7e 1px 0 10px;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+ 
+  
+}
+
+
+
+#nbrParty{
+
+padding-right: 50px;
+
+
+}
+
+.containt{
+
+  position: relative;
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/mapfinal.png');
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
 
 .cell {
 
 
-  height: 100px;
-  width: 100px;
-  border: 1px solid black;
+  height: 70px;
+  width: 70px;
+  border: 1px solid rgba(32, 77, 2,0.6);
+  position: relative;
+
 }
 
 .targetCell {
 
 
-  background-image: url(../img/coffre.png);
+  background-image: url('/home/baptiste/Bureau/Games-RPG/images/coffre.png');
   background-size: contain;
   background-repeat: no-repeat;
+  animation: scale 6s ease-in-out infinite;
+  border: none;
+}
+
+
+@keyframes scale {
+	0% {
+	
+		transform: scale(0.8);
+	}
+	50% {
+	
+		transform: scale(1);
+	}
+	100% {
+		
+		transform: scale(0.8);
+	}
 }
